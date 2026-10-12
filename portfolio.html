@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portfolio | Maaz Creatives</title>
+<meta name="description" content="Full portfolio of Maaz Creatives: social media ads, logos, gaming mascots, thumbnails, booth designs, web and app UI, plus Meta Ads results from real client accounts.">
+<meta name="theme-color" content="#07080d">
+<link rel="icon" href="images/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07080d; --bg2:#0d0e16; --card:#12131e; --card2:#171827;
+  --line:rgba(255,255,255,.09); --line2:rgba(255,255,255,.16);
+  --text:#f5f7fb; --muted:#8f8daa; --soft:#c4c3d6;
+  --cyan:#3de0ff; --cyan-d:#1fb8d8; --violet:#7a5cff; --indigo:#4b3a9e; --teal:#1f7a86;
+  --grad:linear-gradient(135deg,#3fdfff 0%,#5aa2ff 55%,#7a5cff 100%);
+  --font:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --nav-h:68px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 20px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-weight:300;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(60% 50% at 100% 0%,rgba(75,58,158,.55),transparent 70%),
+    radial-gradient(45% 45% at 100% 100%,rgba(31,122,134,.45),transparent 70%),
+    radial-gradient(40% 40% at 0% 100%,rgba(75,58,158,.22),transparent 70%),
+    var(--bg)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+.wrap{width:min(1240px,100% - 48px);margin-inline:auto}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:6px}
+h1,h2,h3{margin:0;font-weight:700;letter-spacing:-.03em;line-height:1.05}
+.skip{position:absolute;left:-999px;top:8px;background:var(--cyan);color:#05121a;padding:10px 16px;border-radius:10px;font-weight:600;z-index:200}
+.skip:focus{left:12px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 28px;border-radius:999px;font-weight:600;font-size:.92rem;border:1px solid transparent;cursor:pointer;transition:transform .2s,background .2s,border-color .2s,color .2s;white-space:nowrap}
+.btn.primary{background:var(--cyan);color:#05121a}
+.btn.primary:hover{transform:translateY(-2px);background:#6aeaff}
+.btn.ghost{border-color:var(--line2);background:rgba(255,255,255,.03)}
+.btn.ghost:hover{border-color:var(--cyan);color:var(--cyan)}
+.btn.sm{padding:10px 20px;font-size:.84rem}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:60;height:calc(var(--nav-h) + env(safe-area-inset-top,0px));padding-top:env(safe-area-inset-top,0px);background:rgba(7,8,13,.72);backdrop-filter:blur(16px) saturate(1.3);-webkit-backdrop-filter:blur(16px) saturate(1.3);border-bottom:1px solid var(--line)}
+.nav .wrap{height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:600;font-size:1rem;letter-spacing:-.01em}
+.brand img{width:40px;height:40px;border-radius:50%;background:#fff;object-fit:cover}
+.links{display:flex;align-items:center;gap:30px}
+.links a{font-size:.88rem;color:var(--soft);font-weight:400;transition:color .2s}
+.links a:hover,.links a[aria-current]{color:var(--cyan)}
+.nav-tools{display:flex;align-items:center;gap:10px}
+.menu-btn{display:none;width:42px;height:42px;border-radius:50%;border:1px solid var(--line2);background:transparent;cursor:pointer;font-size:1.1rem}
+
+/* hero */
+.hero{padding:calc(var(--nav-h) + 70px) 0 90px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 30px;padding:0;list-style:none}
+.pills li{padding:8px 20px;border:1px solid var(--line2);border-radius:999px;background:rgba(255,255,255,.04);font-size:.8rem;font-weight:600}
+.hero h1{font-size:clamp(3.2rem,8.4vw,7.2rem);line-height:.96;margin:0 0 28px}
+.hero .lead{font-size:1.2rem;color:var(--muted);max-width:30ch;margin:0 0 14px}
+.hero .credit{font-size:.92rem;color:var(--muted);margin:0 0 38px;max-width:52ch}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px}
+.portrait{position:relative;justify-self:end;width:min(100%,460px);aspect-ratio:4/5;border-radius:36px;background:var(--grad);overflow:hidden;box-shadow:0 40px 90px -40px rgba(122,92,255,.7)}
+.portrait::after{content:"";position:absolute;inset:0;background:radial-gradient(70% 50% at 20% 0%,rgba(255,255,255,.28),transparent 70%);pointer-events:none}
+.portrait img{position:absolute;left:50%;bottom:0;height:96%;width:auto;max-width:none;transform:translateX(-50%);filter:drop-shadow(0 24px 30px rgba(20,10,80,.45))}
+
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes pop{from{opacity:0;transform:scale(.94) translateY(14px)}to{opacity:1;transform:none}}
+.hero [data-in]{animation:rise .8s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0) * 90ms)}
+.hero .portrait{animation:pop 1s cubic-bezier(.2,.7,.2,1) .25s both}
+
+/* stats strip */
+.stats{border-block:1px solid var(--line);background:rgba(13,14,22,.6)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:30px 28px;border-left:1px solid var(--line)}
+.stat:first-child{border-left:0;padding-left:0}
+.stat b{display:block;font-size:2.4rem;font-weight:700;line-height:1;letter-spacing:-.03em;color:var(--cyan)}
+.stat span{display:block;margin-top:8px;font-size:.86rem;color:var(--muted)}
+
+/* sections */
+section{padding:110px 0}
+.sec-head{max-width:720px;margin-bottom:52px}
+.sec-head h2{font-size:clamp(2.1rem,4.6vw,3.5rem);margin-bottom:16px}
+.sec-head p{margin:0;color:var(--muted);font-size:1.05rem}
+
+/* case studies */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);margin-bottom:56px;border-block:1px solid var(--line)}
+.kpi{padding:28px 26px 28px 0}
+.kpi + .kpi{padding-left:26px;border-left:1px solid var(--line)}
+.kpi b{display:block;font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:700;letter-spacing:-.03em;line-height:1.05}
+.kpi:first-child b{color:var(--cyan)}
+.kpi span{display:block;margin-top:8px;font-size:.86rem;color:var(--muted)}
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.case{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:26px;overflow:hidden}
+.case.wide{grid-column:span 2}
+.shots{display:grid;gap:1px;background:var(--line);flex:none}
+.case.wide .shots{grid-template-columns:1fr 1fr}
+.shot{position:relative;display:block;width:100%;border:0;padding:0;background:#fff;cursor:zoom-in;aspect-ratio:16/11;overflow:hidden}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top left;transition:transform .5s}
+.shot:hover img{transform:scale(1.03)}
+.case-body{padding:26px 28px 28px;display:flex;flex-direction:column;gap:18px;flex:1}
+.tag{align-self:flex-start;padding:5px 14px;border-radius:999px;background:rgba(61,224,255,.12);color:var(--cyan);font-size:.78rem;font-weight:500}
+.case h3{font-size:1.5rem;line-height:1.15}
+.case.wide h3{font-size:1.9rem}
+.metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 20px;margin:0;margin-top:auto}
+.case.wide .metrics{grid-template-columns:repeat(4,1fr)}
+.metrics div{border-top:1px solid var(--line);padding-top:10px}
+.metrics dt{font-size:.76rem;color:var(--muted);margin:0 0 2px}
+.metrics dd{margin:0;font-weight:600;font-size:1.02rem}
+.metrics dd.hl{color:var(--cyan)}
+.clients{margin-top:22px;display:grid;grid-template-columns:.8fr 1.2fr;gap:0;background:var(--card);border:1px solid var(--line);border-radius:26px;overflow:hidden;align-items:stretch}
+.clients .txt{padding:36px;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.clients h3{font-size:1.7rem}
+.clients p{margin:0;color:var(--muted);font-size:.95rem}
+.clients .shot{aspect-ratio:auto;min-height:260px;height:100%}
+.note{margin:22px 0 0;font-size:.82rem;color:var(--muted)}
+
+/* gallery */
+.work-layout{display:grid;grid-template-columns:272px 1fr;gap:56px;align-items:start}
+.index{position:sticky;top:calc(var(--nav-h) + 24px);display:flex;flex-direction:column;max-height:calc(100vh - var(--nav-h) - 48px);overflow:auto;scrollbar-width:thin;padding-right:4px}
+.index button{display:grid;grid-template-columns:34px 1fr auto;align-items:baseline;gap:6px;text-align:left;width:100%;padding:11px 12px 11px 14px;border:0;border-left:2px solid var(--line);background:transparent;cursor:pointer;color:var(--muted);font-size:.9rem;font-weight:400;line-height:1.35;transition:color .2s,border-color .2s,background .2s}
+.index button:hover{color:var(--text)}
+.index button .n{font-weight:600;font-size:.8rem;color:var(--cyan-d)}
+.index button .c{font-size:.78rem;opacity:.75}
+.index button[aria-pressed="true"]{color:var(--text);border-left-color:var(--cyan);background:linear-gradient(90deg,rgba(61,224,255,.1),transparent)}
+.index button[aria-pressed="true"] .n{color:var(--cyan)}
+.gal-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:22px}
+.gal-head h3{font-size:1.6rem;letter-spacing:-.02em}
+.gal-head span{color:var(--muted);font-size:.9rem}
+.grid{display:flex;gap:14px;align-items:flex-start}
+.col{flex:1;min-width:0;display:flex;flex-direction:column;gap:14px}
+.card{position:relative;display:block;width:100%;padding:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card2);cursor:zoom-in}
+.card img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .5s}
+.card:hover img{transform:scale(1.04)}
+.card .tagc{position:absolute;left:10px;bottom:10px;padding:4px 12px;border-radius:999px;background:rgba(7,8,13,.78);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);font-size:.72rem;font-weight:500;opacity:0;transform:translateY(4px);transition:.25s;pointer-events:none}
+.card:hover .tagc,.card:focus-visible .tagc{opacity:1;transform:none}
+.more{display:flex;justify-content:center;margin-top:34px}
+
+/* download */
+.download .box{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;padding:clamp(28px,5vw,56px);border-radius:32px;border:1px solid var(--line2);background:linear-gradient(135deg,rgba(75,58,158,.5),rgba(31,122,134,.32) 70%,rgba(13,14,22,.6))}
+.download h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:14px}
+.download p{margin:0;color:var(--soft);max-width:48ch}
+.download .acts{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end}
+.download .facts{margin:22px 0 0;padding:0;list-style:none;display:flex;gap:26px;flex-wrap:wrap;color:var(--muted);font-size:.86rem}
+.download .facts b{color:var(--text);font-weight:600}
+
+/* contact */
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.contact h2{font-size:clamp(2.6rem,6vw,4.8rem);margin-bottom:22px}
+.contact p{color:var(--muted);font-size:1.08rem;max-width:44ch;margin:0 0 32px}
+.clist{margin:0;padding:0;list-style:none;border-radius:28px;border:1px solid var(--line2);background:rgba(255,255,255,.05);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);overflow:hidden}
+.clist li + li{border-top:1px solid var(--line)}
+.clist a{display:block;padding:20px 28px;transition:background .2s}
+.clist a:hover{background:rgba(61,224,255,.08)}
+.clist small{display:block;font-size:.76rem;color:var(--cyan);font-weight:600;margin-bottom:2px}
+.clist span{font-size:1.02rem;overflow-wrap:anywhere}
+
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:.84rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;display:none;flex-direction:column;align-items:center;justify-content:center;background:rgba(4,5,9,.95);padding:64px 20px 20px}
+.lb.open{display:flex}
+.lb figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:14px;max-width:100%}
+.lb img{max-width:min(94vw,1100px);max-height:78vh;width:auto;height:auto;border-radius:14px;background:#fff;object-fit:contain}
+.lb figcaption{font-size:.88rem;color:var(--soft);text-align:center}
+.lb button{position:absolute;width:48px;height:48px;border-radius:50%;border:1px solid var(--line2);background:rgba(255,255,255,.08);color:#fff;font-size:1.3rem;cursor:pointer;display:grid;place-items:center;transition:background .2s}
+.lb button:hover{background:rgba(61,224,255,.25)}
+.lb .x{top:calc(14px + env(safe-area-inset-top,0px));right:16px}
+.lb .p{left:16px;top:50%;transform:translateY(-50%)}
+.lb .nx{right:16px;top:50%;transform:translateY(-50%)}
+
+@media (max-width:1000px){
+  .links{display:none}
+  .menu-btn{display:grid;place-items:center}
+  .links.open{display:flex;position:absolute;top:calc(var(--nav-h) + env(safe-area-inset-top,0px));left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;background:rgba(7,8,13,.97);border-bottom:1px solid var(--line);padding:6px 24px 16px}
+  .links.open a{padding:14px 0;width:100%;border-bottom:1px solid var(--line)}
+  .hero{padding-top:calc(var(--nav-h) + 40px)}
+  .hero .wrap{grid-template-columns:1fr;gap:44px}
+  .portrait{justify-self:center;order:-1;width:min(100%,400px)}
+  .stats .wrap{grid-template-columns:1fr 1fr}
+  .stat:nth-child(3){border-left:0;padding-left:0}
+  .stat:nth-child(n+3){border-top:1px solid var(--line)}
+  .kpis{grid-template-columns:1fr 1fr}
+  .kpi:nth-child(3){border-left:0;padding-left:0}
+  .kpi:nth-child(n+3){border-top:1px solid var(--line)}
+  .kpi:nth-child(2){padding-left:26px}
+  .cases{grid-template-columns:1fr 1fr}
+  .clients{grid-template-columns:1fr}
+  .work-layout{grid-template-columns:1fr;gap:26px}
+  .index{position:static;flex-direction:row;max-height:none;overflow-x:auto;gap:8px;padding:0 0 8px;margin-inline:-24px;padding-inline:24px;scroll-snap-type:x proximity}
+  .index button{display:flex;gap:8px;width:auto;flex:none;white-space:nowrap;padding:9px 16px;border:1px solid var(--line2);border-radius:999px;scroll-snap-align:start}
+  .index button .n{display:none}
+  .index button[aria-pressed="true"]{border-color:var(--cyan);background:rgba(61,224,255,.12)}
+  .download .box,.contact .wrap{grid-template-columns:1fr;gap:30px}
+  .download .acts{justify-content:flex-start}
+  section{padding:80px 0}
+}
+@media (max-width:640px){
+  .wrap{width:min(1240px,100% - 36px)}
+  .nav .btn{display:none}
+  .cases{grid-template-columns:1fr}
+  .case.wide{grid-column:auto}
+  .case.wide .shots{grid-template-columns:1fr}
+  .case.wide .metrics{grid-template-columns:repeat(2,1fr)}
+  .kpi b{font-size:1.6rem}
+  .stat{padding:22px 16px}
+  .stat b{font-size:1.9rem}
+  .grid,.col{gap:10px}
+  .card{border-radius:12px}
+  .lb .p,.lb .nx{top:auto;bottom:18px;transform:none}
+  .lb .p{left:calc(50% - 56px)}
+  .lb .nx{right:calc(50% - 56px)}
+  .lb img{max-height:70vh}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero [data-in],.hero .portrait{animation:none}
+  .card img,.shot img{transition:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#work">Skip to the work</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Maaz Creatives, back to the main site"><img src="images/logo.webp" alt="" width="40" height="40"><span>Maaz Creatives</span></a>
+    <nav class="links" id="links" aria-label="Page sections">
+      <a href="index.html">Main site</a>
+      <a href="#work">All work</a>
+      <a href="#cases">Meta Ads results</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-tools">
+      <a class="btn primary sm" href="#contact">Book a consultation</a>
+      <button class="menu-btn" id="menu" aria-label="Open menu" aria-expanded="false" aria-controls="links">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="top" style="padding-bottom:90px">
+  <div class="wrap">
+    <div>
+      <ul class="pills" data-in style="--i:0"><li>Design</li><li>Development</li><li>Animation</li><li>Marketing</li></ul>
+      <h1 data-in style="--i:1">Maaz<br>Creatives</h1>
+      <p class="lead" data-in style="--i:2">Full portfolio. Every design, mascot, logo, ad and website in one place.</p>
+      <p class="credit" data-in style="--i:3">Led by Maaz Ahmed Hashmi: designer, animator, developer and Meta Ads specialist.</p>
+      <div class="cta" data-in style="--i:4">
+        <a class="btn primary" href="#work">Browse the work</a>
+        <a class="btn ghost" href="#cases">See ad results</a>
+      </div>
+    </div>
+    <div class="portrait"><img src="images/hero.webp" alt="Maaz Ahmed Hashmi in a suit" width="600" height="900" fetchpriority="high"></div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><b id="stat-designs">0</b><span>Designs shown on this page</span></div>
+    <div class="stat"><b id="stat-cats">18</b><span>Industries covered</span></div>
+    <div class="stat"><b>1000+</b><span>Clients and projects delivered</span></div>
+    <div class="stat"><b>6+</b><span>Years of industry experience</span></div>
+  </div>
+</div>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Everything, organised</h2>
+      <p>Browse the work by industry. Select any design to view it larger, then use the arrow keys or swipe to move through the set.</p>
+    </div>
+    <div class="work-layout">
+      <div class="index" id="index" role="group" aria-label="Filter by industry"></div>
+      <div>
+        <div class="gal-head"><h3 id="gal-title">All designs</h3><span id="gal-count"></span></div>
+        <div class="grid" id="grid" aria-live="polite"></div>
+        <div class="more"><button class="btn ghost" id="more" type="button">Show more designs</button></div>
+        <noscript><p>The gallery needs JavaScript. You can view every design in the <a href="Maaz-Creatives-Full-Portfolio.pdf" style="color:var(--cyan)">full portfolio PDF</a> instead.</p></noscript>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="cases" style="padding-top:40px">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Meta Ads results from real client accounts</h2>
+      <p>Facebook and Instagram campaigns run for industrial, fashion, dental and solar clients. Select any screenshot to see the dashboard in full.</p>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi"><b>672</b><span>Conversations started across 16 ads</span></div>
+      <div class="kpi"><b>PKR 8.57</b><span>Best cost per lead, 105 leads</span></div>
+      <div class="kpi"><b>PKR 17.25</b><span>Industrial machinery average, 433 leads</span></div>
+      <div class="kpi"><b>PKR 0.29</b><span>Cheapest engagement, 951 engagements</span></div>
+    </div>
+
+    <div class="cases" id="cases-grid"></div>
+    <div class="more" id="cases-more"><button class="btn ghost" id="cases-more-btn" type="button">View more results</button></div>
+
+    <div class="clients">
+      <div class="txt">
+        <h3>Brands and industries served</h3>
+        <p>Construction, automotive and logistics, trading, professional services, technology, printing and packaging, food, textile, real estate and education.</p>
+      </div>
+      <button class="shot" type="button" data-case="8" aria-label="Open the clients overview"><img src="images/case-clients.webp" alt="Logos of brands and industries Maaz Creatives has served" loading="lazy" width="1000" height="562"></button>
+    </div>
+    <p class="note">Leads are messaging conversations started. Figures are taken from the client ad dashboards shown above.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Let&rsquo;s build your brand.</h2>
+      <p>Tell me about your business and goals, and I&rsquo;ll get back to you with the best way to bring your digital vision to life.</p>
+      <a class="btn primary" href="mailto:maazdesignsandgraphics@gmail.com?subject=Project%20enquiry">Book a consultation</a>
+    </div>
+    <ul class="clist">
+      <li><a href="mailto:maazdesignsandgraphics@gmail.com"><small>Email</small><span>maazdesignsandgraphics@gmail.com</span></a></li>
+      <li><a href="https://wa.me/923492252166" target="_blank" rel="noopener"><small>WhatsApp / phone</small><span>0349 2252166</span></a></li>
+      <li><a href="https://www.instagram.com/maaz_creatives/" target="_blank" rel="noopener"><small>Instagram</small><span>@maaz_creatives</span></a></li>
+      <li><a href="https://www.behance.net/maazahmedhashmi" target="_blank" rel="noopener"><small>Behance</small><span>behance.net/maazahmedhashmi</span></a></li>
+      <li><a href="https://www.linkedin.com/in/maaz-creative1/" target="_blank" rel="noopener"><small>LinkedIn</small><span>maaz-creative1</span></a></li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap"><span>&copy; <span id="yr"></span> Maaz Creatives. Maaz Ahmed Hashmi. All rights reserved.</span><span>Design, development, animation and marketing</span></div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="x" type="button" aria-label="Close">&#10005;</button>
+  <button class="p" type="button" aria-label="Previous">&#8249;</button>
+  <figure><img id="lb-img" alt=""><figcaption id="lb-cap"></figcaption></figure>
+  <button class="nx" type="button" aria-label="Next">&#8250;</button>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var CATS=[["food", "Food & Beverage"], ["realestate", "Real Estate & Construction"], ["machinery", "Industrial Machinery & Packaging"], ["apparel", "Apparel, Printing & Embroidery"], ["fashion", "Fashion, Jewellery & Boutiques"], ["beauty", "Beauty, Salon & Fragrance"], ["retail", "Retail & E-commerce"], ["tech", "Technology & Digital Products"], ["services", "Professional Services & Community"], ["energy", "Solar, Energy & Utilities"], ["travel", "Travel & Tourism"], ["auto", "Automotive, Logistics & Exhibitions"], ["sports", "Sports & Fitness"], ["media", "Media, Music & Events"], ["gaming", "Gaming, Streaming & Character Art"], ["yt", "YouTube & Content Creators"], ["health", "Healthcare & Dental"], ["results", "Meta Ads & Marketing Results"]];
+  /* [file, category, width, height] */
+  var WORKS=[["images/social-001.webp","realestate",1000,1000],["images/social-002.webp","food",1000,1000],["images/social-003.webp","food",1000,1000],["images/social-004.webp","services",800,1000],["images/social-005.webp","apparel",800,1000],["images/social-006.webp","tech",1000,1000],["images/social-007.webp","realestate",1000,1000],["images/social-008.webp","energy",1000,1000],["images/social-009.webp","machinery",707,1000],["images/social-010.webp","apparel",800,1000],["images/social-011.webp","machinery",800,1000],["images/social-012.webp","machinery",800,1000],["images/social-013.webp","machinery",800,1000],["images/social-014.webp","apparel",800,1000],["images/social-015.webp","beauty",1000,563],["images/social-016.webp","services",1000,713],["images/social-017.webp","machinery",1000,1000],["images/social-018.webp","machinery",940,788],["images/social-019.webp","machinery",1000,1000],["images/social-020.webp","machinery",800,1000],["images/social-021.webp","tech",1000,1000],["images/social-022.webp","machinery",800,1000],["images/social-023.webp","services",1000,1000],["images/social-024.webp","food",1000,1000],["images/social-025.webp","machinery",800,1000],["images/social-026.webp","food",734,1000],["images/social-027.webp","machinery",800,1000],["images/social-028.webp","machinery",800,1000],["images/social-029.webp","machinery",800,1000],["images/social-030.webp","apparel",512,640],["images/social-031.webp","apparel",800,1000],["images/social-032.webp","food",1000,1000],["images/social-033.webp","realestate",800,1000],["images/social-034.webp","tech",846,1000],["images/social-035.webp","apparel",800,1000],["images/social-036.webp","apparel",705,1000],["images/social-037.webp","apparel",800,1000],["images/social-038.webp","apparel",800,1000],["images/social-039.webp","apparel",800,1000],["images/social-040.webp","retail",800,1000],["images/social-041.webp","travel",800,1000],["images/social-042.webp","food",734,1000],["images/social-043.webp","food",1000,1000],["images/social-044.webp","beauty",1000,1000],["images/social-045.webp","apparel",1000,1000],["images/social-046.webp","retail",750,1000],["images/social-047.webp","apparel",800,1000],["images/social-048.webp","retail",750,1000],["images/social-049.webp","apparel",800,1000],["images/social-050.webp","tech",800,1000],["images/social-051.webp","apparel",800,1000],["images/social-052.webp","apparel",800,1000],["images/social-053.webp","apparel",376,316],["images/social-054.webp","apparel",376,316],["images/social-055.webp","apparel",432,540],["images/social-056.webp","travel",432,432],["images/social-057.webp","beauty",700,700],["images/social-058.webp","food",324,324],["images/social-059.webp","realestate",324,324],["images/social-060.webp","realestate",324,324],["images/social-061.webp","realestate",324,324],["images/social-062.webp","food",324,324],["images/social-063.webp","food",400,400],["images/social-064.webp","food",324,324],["images/social-065.webp","realestate",324,314],["images/social-066.webp","food",450,450],["images/social-067.webp","beauty",324,324],["images/social-068.webp","travel",600,600],["images/social-069.webp","travel",432,432],["images/social-070.webp","travel",432,432],["images/social-071.webp","machinery",432,432],["images/social-072.webp","machinery",470,394],["images/social-073.webp","machinery",432,432],["images/social-074.webp","beauty",324,324],["images/social-075.webp","food",324,324],["images/logo-001.webp","tech",1000,1000],["images/logo-002.webp","auto",1000,1000],["images/logo-003.webp","tech",1000,1000],["images/logo-004.webp","services",1000,1000],["images/logo-005.webp","gaming",781,1000],["images/logo-006.webp","services",911,1000],["images/logo-007.webp","fashion",1000,1000],["images/logo-008.webp","realestate",1000,1000],["images/logo-009.webp","fashion",1000,1000],["images/logo-010.webp","fashion",1000,1000],["images/logo-011.webp","fashion",1000,1000],["images/logo-012.webp","fashion",1000,1000],["images/logo-013.webp","media",1000,1000],["images/logo-014.webp","realestate",1000,1000],["images/logo-015.webp","fashion",1000,1000],["images/logo-016.webp","media",1000,1000],["images/logo-017.webp","realestate",1000,1000],["images/logo-018.webp","media",1000,1000],["images/logo-019.webp","media",1000,1000],["images/logo-020.webp","energy",1000,1000],["images/logo-021.webp","fashion",1000,1000],["images/logo-022.webp","services",1000,1000],["images/logo-023.webp","media",1000,1000],["images/logo-024.webp","media",1000,1000],["images/logo-025.webp","fashion",1000,1000],["images/logo-026.webp","services",1000,1000],["images/logo-027.webp","media",1000,1000],["images/logo-028.webp","media",1000,1000],["images/logo-029.webp","sports",1000,1000],["images/logo-030.webp","sports",1000,1000],["images/logo-031.webp","fashion",1000,1000],["images/logo-032.webp","fashion",1000,1000],["images/logo-033.webp","fashion",1000,1000],["images/logo-034.webp","fashion",1000,1000],["images/logo-035.webp","fashion",1000,1000],["images/logo-036.webp","food",1000,1000],["images/logo-037.webp","energy",1000,632],["images/logo-038.webp","machinery",1000,1000],["images/logo-039.webp","fashion",160,160],["images/logo-040.webp","energy",200,200],["images/logo-041.webp","sports",1000,1000],["images/logo-042.webp","services",1000,1000],["images/logo-043.webp","services",1000,1000],["images/logo-044.webp","tech",1000,1000],["images/logo-045.webp","auto",1000,1000],["images/logo-046.webp","services",1000,1000],["images/logo-047.webp","services",1000,1000],["images/logo-048.webp","media",1000,1000],["images/logo-049.webp","travel",1000,1000],["images/logo-050.webp","media",540,540],["images/logo-051.webp","auto",1000,1000],["images/logo-052.webp","auto",1000,1000],["images/logo-053.webp","sports",1000,1000],["images/logo-054.webp","services",1000,1000],["images/logo-055.webp","fashion",1000,1000],["images/logo-056.webp","tech",1000,1000],["images/logo-057.webp","services",1000,1000],["images/logo-058.webp","tech",600,600],["images/logo-059.webp","services",600,400],["images/logo-060.webp","energy",600,600],["images/logo-061.webp","services",600,478],["images/logo-062.webp","beauty",600,600],["images/mockup-001.webp","services",1000,664],["images/mockup-002.webp","travel",1000,667],["images/mockup-003.webp","tech",1000,667],["images/mockup-004.webp","tech",1000,562],["images/mockup-005.webp","realestate",1000,769],["images/mockup-006.webp","travel",1000,667],["images/mockup-007.webp","services",1000,667],["images/mockup-008.webp","services",1000,664],["images/mockup-009.webp","beauty",562,1000],["images/mockup-010.webp","beauty",1000,1000],["images/mockup-011.webp","beauty",1000,1000],["images/mockup-012.webp","sports",1000,667],["images/mockup-013.webp","food",1000,667],["images/mockup-014.webp","services",1000,750],["images/mockup-015.webp","travel",1000,767],["images/stationery-001.webp","realestate",707,1000],["images/stationery-002.webp","realestate",1000,571],["images/stationery-003.webp","realestate",1000,571],["images/stationery-004.webp","realestate",1000,571],["images/stationery-005.webp","energy",1000,603],["images/stationery-006.webp","realestate",1000,603],["images/stationery-007.webp","services",1000,601],["images/stationery-008.webp","services",1000,601],["images/stationery-009.webp","services",1000,601],["images/stationery-010.webp","services",1000,601],["images/gaming-001.webp","gaming",1000,1000],["images/gaming-002.webp","gaming",1000,563],["images/gaming-003.webp","gaming",1000,1000],["images/gaming-004.webp","gaming",1000,1000],["images/gaming-005.webp","gaming",1000,1000],["images/gaming-006.webp","gaming",1000,1000],["images/gaming-007.webp","gaming",320,160],["images/gaming-008.webp","gaming",1000,1000],["images/gaming-009.webp","gaming",467,467],["images/gaming-010.webp","gaming",1000,1000],["images/gaming-011.webp","gaming",1000,1000],["images/gaming-012.webp","gaming",1000,1000],["images/gaming-013.webp","gaming",1000,562],["images/gaming-014.webp","gaming",1000,1000],["images/gaming-015.webp","gaming",1000,1000],["images/gaming-016.webp","gaming",1000,1000],["images/gaming-017.webp","gaming",1000,1000],["images/gaming-018.webp","gaming",1000,857],["images/gaming-019.webp","gaming",1000,1000],["images/gaming-020.webp","gaming",1000,1000],["images/gaming-021.webp","gaming",1000,1000],["images/gaming-022.webp","gaming",1000,1000],["images/gaming-023.webp","gaming",1000,333],["images/gaming-024.webp","gaming",1000,563],["images/gaming-025.webp","gaming",1000,563],["images/gaming-026.webp","gaming",1000,562],["images/gaming-027.webp","gaming",1000,1000],["images/gaming-028.webp","gaming",1000,563],["images/gaming-029.webp","gaming",1000,400],["images/gaming-030.webp","gaming",1000,333],["images/gaming-031.webp","gaming",1000,563],["images/gaming-032.webp","gaming",1000,563],["images/gaming-033.webp","gaming",1000,563],["images/gaming-034.webp","gaming",1000,562],["images/gaming-035.webp","gaming",1000,1000],["images/gaming-036.webp","gaming",600,600],["images/gaming-037.webp","gaming",600,600],["images/gaming-038.webp","gaming",600,600],["images/gaming-039.webp","gaming",600,600],["images/gaming-040.webp","gaming",300,300],["images/gaming-041.webp","gaming",600,600],["images/gaming-042.webp","gaming",600,600],["images/gaming-043.webp","gaming",600,600],["images/gaming-044.webp","gaming",600,600],["images/gaming-045.webp","gaming",600,600],["images/gaming-046.webp","gaming",512,512],["images/gaming-047.webp","gaming",512,512],["images/gaming-048.webp","gaming",1000,562],["images/gaming-049.webp","gaming",1000,562],["images/gaming-050.webp","gaming",1000,250],["images/art-001.webp","gaming",1000,1000],["images/art-002.webp","gaming",1000,1000],["images/art-003.webp","gaming",1000,1000],["images/art-004.webp","gaming",1000,1000],["images/art-005.webp","gaming",1000,1000],["images/art-006.webp","gaming",1000,1000],["images/art-007.webp","gaming",1000,1000],["images/art-008.webp","gaming",1000,1000],["images/art-009.webp","gaming",1000,665],["images/art-010.webp","gaming",1000,1000],["images/art-011.webp","gaming",1000,1000],["images/art-012.webp","gaming",1000,1000],["images/art-013.webp","gaming",1000,1000],["images/art-014.webp","gaming",1000,622],["images/art-015.webp","gaming",1000,1000],["images/art-016.webp","gaming",586,1000],["images/art-017.webp","gaming",1000,1000],["images/art-018.webp","gaming",1000,1000],["images/art-019.webp","gaming",112,112],["images/art-020.webp","gaming",1000,1000],["images/art-021.webp","gaming",1000,1000],["images/art-022.webp","gaming",1000,1000],["images/art-023.webp","gaming",1000,563],["images/art-024.webp","gaming",1000,1000],["images/art-025.webp","gaming",1000,1000],["images/art-026.webp","gaming",1000,1000],["images/art-027.webp","gaming",1000,563],["images/art-028.webp","gaming",1000,1000],["images/poster-001.webp","realestate",1000,668],["images/poster-002.webp","media",562,1000],["images/poster-003.webp","auto",1000,661],["images/poster-004.webp","food",714,1000],["images/poster-005.webp","food",526,744],["images/poster-006.webp","food",526,744],["images/poster-007.webp","food",714,1000],["images/poster-008.webp","food",714,1000],["images/poster-009.webp","media",1000,1000],["images/poster-010.webp","sports",800,1000],["images/poster-011.webp","sports",773,1000],["images/poster-012.webp","media",697,1000],["images/poster-013.webp","media",716,1000],["images/poster-014.webp","media",1000,1000],["images/poster-015.webp","apparel",1000,1000],["images/poster-016.webp","media",800,1000],["images/poster-017.webp","media",998,1000],["images/thumb-001.webp","yt",1000,563],["images/thumb-002.webp","yt",1000,563],["images/thumb-003.webp","yt",1000,563],["images/thumb-004.webp","yt",512,288],["images/thumb-005.webp","yt",512,288],["images/thumb-006.webp","yt",512,288],["images/thumb-007.webp","yt",512,288],["images/thumb-008.webp","yt",512,288],["images/thumb-009.webp","yt",576,324],["images/thumb-010.webp","yt",512,288],["images/thumb-011.webp","yt",576,324],["images/thumb-012.webp","yt",640,360],["images/thumb-013.webp","yt",640,360],["images/booth-001.webp","auto",800,800],["images/booth-002.webp","auto",800,800],["images/booth-003.webp","auto",560,560],["images/apparel-001.webp","apparel",1000,1000],["images/apparel-002.webp","apparel",1000,1000],["images/apparel-003.webp","apparel",1000,1000],["images/apparel-004.webp","apparel",1000,1000],["images/apparel-005.webp","apparel",1000,1000],["images/apparel-006.webp","apparel",1000,632],["images/apparel-007.webp","apparel",1000,632],["images/apparel-008.webp","apparel",1000,631],["images/apparel-009.webp","apparel",754,1000],["images/apparel-010.webp","apparel",800,1000],["images/apparel-011.webp","apparel",1000,632],["images/apparel-012.webp","apparel",800,1000],["images/apparel-013.webp","apparel",800,1000],["images/apparel-014.webp","apparel",800,1000],["images/apparel-015.webp","apparel",800,1000],["images/apparel-016.webp","apparel",800,1000],["images/apparel-017.webp","apparel",800,1000],["images/apparel-018.webp","apparel",800,1000],["images/apparel-019.webp","apparel",800,1000],["images/apparel-020.webp","apparel",800,1000],["images/apparel-021.webp","apparel",800,1000],["images/apparel-022.webp","apparel",800,1000],["images/apparel-023.webp","apparel",800,1000],["images/apparel-024.webp","apparel",800,1000],["images/apparel-025.webp","apparel",800,1000],["images/apparel-026.webp","apparel",820,312],["images/web-001.webp","tech",1000,333],["images/web-002.webp","tech",1000,660],["images/web-003.webp","tech",710,1000],["images/web-004.webp","tech",1000,1000],["images/web-005.webp","tech",769,1000],["images/web-006.webp","tech",600,450],["images/web-007.webp","retail",1000,667],["images/web-008.webp","retail",752,564],["images/web-009.webp","tech",829,1000],["images/web-010.webp","tech",800,1000],["images/web-011.webp","tech",1000,593],["images/web-012.webp","retail",400,300],["images/web-013.webp","tech",1000,750],["images/web-014.webp","retail",245,1000],["images/web-015.webp","retail",192,705],["images/web-016.webp","food",230,1000],["images/web-017.webp","tech",348,1000],["images/web-018.webp","retail",268,1000],["images/ads-001.webp","results",1000,491],["images/ads-002.webp","results",1000,490],["images/ads-003.webp","results",1000,314],["images/ads-004.webp","results",1000,391],["images/ads-005.webp","results",1000,383],["images/ads-006.webp","results",1000,493],["images/ads-007.webp","results",1000,563],["images/ads-008.webp","results",1000,563],["images/ads-009.webp","results",1000,1000],["images/ads-010.webp","results",1000,563],["images/pages-001.webp","results",1000,572],["images/pages-002.webp","results",1000,561],["images/pages-003.webp","food",449,1000],["images/pages-004.webp","food",449,1000],["images/pages-005.webp","food",449,1000],["images/pages-006.webp","machinery",449,1000],["images/pages-007.webp","food",449,1000],["images/pages-008.webp","tech",449,1000],["images/pages-009.webp","tech",449,1000],["images/pages-010.webp","machinery",449,1000],["images/pages-011.webp","tech",449,1000],["images/pages-012.webp","tech",449,1000],["images/pages-013.webp","retail",449,1000],["images/pages-014.webp","tech",449,1000],["images/pages-015.webp","tech",449,1000],["images/pages-016.webp","health",449,1000],["images/pages-017.webp","health",449,1000],["images/pages-018.webp","fashion",449,1000],["images/pages-019.webp","health",449,1000],["images/pages-020.webp","fashion",449,1000],["images/pages-021.webp","fashion",449,1000],["images/pages-022.webp","fashion",449,1000],["images/pages-023.webp","food",449,1000],["images/pages-024.webp","food",449,1000],["images/pages-025.webp","food",449,1000],["images/pages-026.webp","food",449,1000],["images/pages-027.webp","food",449,1000],["images/pages-028.webp","food",449,1000]];
+  var catName={}; CATS.forEach(function(c){catName[c[0]]=c[1]});
+
+  /* ---------- case studies ---------- */
+  var CASES=[
+    {id:"industrial",wide:true,tag:"Industrial machinery",title:"433 leads at PKR 17.25 each",imgs:["case-industrial-1","case-industrial-2"],
+      m:[["Ads run","9"],["Reach","40,658"],["Spend","PKR 7,468"],["Best cost per lead","PKR 8.57",1]]},
+    {id:"fashion",tag:"Fashion tailoring",title:"98 leads at PKR 17.87 each",imgs:["case-fashion-1","case-fashion-2"],
+      m:[["Ads run","2"],["Reach","5,287"],["Spend","PKR 1,751"],["Cost per lead","PKR 17.87",1]]},
+    {id:"dental",tag:"Dental clinic",title:"68 leads across 3 ads",imgs:["case-dental"],
+      m:[["Ads run","3"],["Reach","14,249"],["Spend","PKR 4,927"],["Cost per lead","PKR 72.46",1]]},
+    {id:"solar",tag:"Solar",title:"16 leads from a single ad",imgs:["case-solar"],
+      m:[["Ads run","1"],["Reach","1,516"],["Spend","PKR 834"],["Cost per lead","PKR 52.14",1]]},
+    {id:"latest",tag:"Latest campaign, Sep 2026",title:"57 leads from 6K reach",imgs:["case-latest"],
+      m:[["Ads run","1"],["Reach","6,000"],["Spend","PKR 1,494"],["Cost per lead","PKR 26.22",1]]}
+  ];
+  var CASE_FILES=[],CASE_CAPS=[];
+  CASES.forEach(function(c){c.imgs.forEach(function(f,i){CASE_FILES.push("images/"+f+".webp");CASE_CAPS.push(c.tag+" · Meta Ads dashboard"+(c.imgs.length>1?" ("+(i+1)+" of "+c.imgs.length+")":""))})});
+  CASE_FILES.push("images/case-clients.webp");CASE_CAPS.push("Brands and industries served");
+  var caseDims={"case-industrial-1":[1000,490],"case-industrial-2":[1000,490],"case-fashion-1":[1000,314],"case-fashion-2":[1000,390],"case-dental":[1000,383],"case-solar":[1000,493],"case-latest":[629,1400]};
+
+  var casesEl=document.getElementById("cases-grid"),ci=0;
+  CASES.forEach(function(c){
+    var art=document.createElement("article");art.className="case"+(c.wide?" wide":"");
+    var shots='<div class="shots">';
+    c.imgs.forEach(function(f){
+      var d=caseDims[f];
+      shots+='<button class="shot" type="button" data-case="'+(ci++)+'" aria-label="Open '+c.tag+' dashboard"><img src="images/'+f+'.webp" alt="'+c.tag+' Meta Ads dashboard" loading="lazy" width="'+d[0]+'" height="'+d[1]+'"></button>';
+    });
+    shots+='</div>';
+    var dl='<dl class="metrics">';
+    c.m.forEach(function(x){dl+='<div><dt>'+x[0]+'</dt><dd'+(x[2]?' class="hl"':'')+'>'+x[1]+'</dd></div>'});
+    dl+='</dl>';
+    art.innerHTML=shots+'<div class="case-body"><span class="tag">'+c.tag+'</span><h3>'+c.title+'</h3>'+dl+'</div>';
+    casesEl.appendChild(art);
+  });
+  (function(){
+    var arts=[].slice.call(casesEl.querySelectorAll(".case")),hid=arts.slice(2);
+    hid.forEach(function(a){a.style.display="none"});
+    var wrap=document.getElementById("cases-more"),btn=document.getElementById("cases-more-btn");
+    btn.textContent="View more results ("+hid.length+")";
+    btn.addEventListener("click",function(){hid.forEach(function(a){a.style.display=""});wrap.style.display="none"});
+  })();
+
+  /* ---------- lightbox ---------- */
+  var lb=document.getElementById("lb"),lbi=document.getElementById("lb-img"),lbc=document.getElementById("lb-cap");
+  var lbList=[],lbIdx=0,lastFocus=null;
+  function lbShow(i){
+    lbIdx=(i+lbList.length)%lbList.length;
+    var it=lbList[lbIdx];
+    lbi.src=it.src;lbi.alt=it.alt;
+    lbc.textContent=it.cap+"  ·  "+(lbIdx+1)+" / "+lbList.length;
+    var nx=lbList[(lbIdx+1)%lbList.length];if(nx){var pre=new Image();pre.src=nx.src}
+  }
+  function lbOpen(list,i,opener){
+    lbList=list;lastFocus=opener||document.activeElement;
+    lbShow(i);lb.classList.add("open");document.body.style.overflow="hidden";
+    lb.querySelector(".x").focus();
+  }
+  function lbClose(){
+    lb.classList.remove("open");document.body.style.overflow="";lbi.removeAttribute("src");
+    if(lastFocus&&lastFocus.focus)lastFocus.focus();
+  }
+  lb.querySelector(".x").addEventListener("click",lbClose);
+  lb.querySelector(".p").addEventListener("click",function(e){e.stopPropagation();lbShow(lbIdx-1)});
+  lb.querySelector(".nx").addEventListener("click",function(e){e.stopPropagation();lbShow(lbIdx+1)});
+  lb.addEventListener("click",function(e){if(e.target===lb)lbClose()});
+  document.addEventListener("keydown",function(e){
+    if(!lb.classList.contains("open"))return;
+    if(e.key==="Escape")lbClose();
+    else if(e.key==="ArrowLeft")lbShow(lbIdx-1);
+    else if(e.key==="ArrowRight")lbShow(lbIdx+1);
+    else if(e.key==="Tab"){
+      var f=[].slice.call(lb.querySelectorAll("button"));
+      var first=f[0],last=f[f.length-1];
+      if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}
+      else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}
+    }
+  });
+  var tx=null;
+  lb.addEventListener("touchstart",function(e){tx=e.touches[0].clientX},{passive:true});
+  lb.addEventListener("touchend",function(e){
+    if(tx===null)return;var dx=e.changedTouches[0].clientX-tx;tx=null;
+    if(Math.abs(dx)>50)lbShow(lbIdx+(dx<0?1:-1));
+  });
+  var caseList=CASE_FILES.map(function(f,i){return{src:f,alt:CASE_CAPS[i],cap:CASE_CAPS[i]}});
+  document.addEventListener("click",function(e){
+    var b=e.target.closest("[data-case]");
+    if(b)lbOpen(caseList,parseInt(b.getAttribute("data-case"),10),b);
+  });
+
+  /* ---------- gallery ---------- */
+  var grid=document.getElementById("grid"),indexEl=document.getElementById("index"),more=document.getElementById("more");
+  var title=document.getElementById("gal-title"),count=document.getElementById("gal-count");
+  var BATCH=36,cur="all",list=[],shown=0,cols=[],colH=[];
+  var perCat={};CATS.forEach(function(c){perCat[c[0]]=[]});
+  WORKS.forEach(function(w,i){var o={i:i,f:w[0],c:w[1],w:w[2],h:w[3],n:perCat[w[1]].length+1};perCat[w[1]].push(o)});
+
+  function interleave(){
+    var out=[],lists=CATS.map(function(c){return perCat[c[0]].slice()}),left=true;
+    while(left){left=false;lists.forEach(function(l){if(l.length){out.push(l.shift());left=true}})}
+    return out;
+  }
+  var ALL=interleave();
+
+  document.getElementById("stat-designs").textContent=WORKS.length;
+  document.getElementById("stat-cats").textContent=CATS.length;
+
+  function buildIndex(){
+    var h='<button type="button" data-cat="all" aria-pressed="true"><span class="n">&#10033;</span><span>All designs</span><span class="c">'+WORKS.length+'</span></button>';
+    CATS.forEach(function(c,i){
+      var n=(i+1<10?"0":"")+(i+1);
+      h+='<button type="button" data-cat="'+c[0]+'" aria-pressed="false"><span class="n">'+n+'</span><span>'+c[1].replace(/&/g,"&amp;")+'</span><span class="c">'+perCat[c[0]].length+'</span></button>';
+    });
+    indexEl.innerHTML=h;
+  }
+  function colCount(){var w=grid.clientWidth;return w>=900?4:w>=600?3:2}
+  function makeCols(){
+    grid.innerHTML="";cols=[];colH=[];
+    for(var i=0;i<colCount();i++){var c=document.createElement("div");c.className="col";grid.appendChild(c);cols.push(c);colH.push(0)}
+  }
+  function addCards(from,to){
+    for(var k=from;k<to&&k<list.length;k++){
+      var it=list[k],ratio=Math.min(it.h/it.w,1.9),min=0;
+      for(var j=1;j<colH.length;j++)if(colH[j]<colH[min])min=j;
+      var b=document.createElement("button");b.type="button";b.className="card";b.setAttribute("data-k",k);
+      b.style.aspectRatio="1 / "+ratio.toFixed(4);
+      var label=catName[it.c];
+      b.setAttribute("aria-label","View "+label+" design "+it.n);
+      var im=document.createElement("img");im.src=it.f;im.alt=label+", design "+it.n;im.width=it.w;im.height=it.h;im.loading="lazy";im.decoding="async";
+      var t=document.createElement("span");t.className="tagc";t.textContent=label;
+      b.appendChild(im);b.appendChild(t);
+      cols[min].appendChild(b);colH[min]+=ratio+0.02;
+    }
+  }
+  function render(){
+    makeCols();addCards(0,shown);
+    var left=list.length-shown;
+    more.parentNode.style.display=left>0?"flex":"none";
+    more.textContent="Show "+Math.min(BATCH,left)+" more designs";
+    count.textContent=(shown<list.length?"Showing "+shown+" of "+list.length:list.length+" design"+(list.length===1?"":"s"));
+  }
+  function setCat(c,scroll){
+    cur=c;list=c==="all"?ALL:perCat[c];shown=Math.min(BATCH,list.length);
+    title.textContent=c==="all"?"All designs":catName[c];
+    [].forEach.call(indexEl.querySelectorAll("button"),function(b){b.setAttribute("aria-pressed",b.getAttribute("data-cat")===c?"true":"false")});
+    render();
+    if(scroll){var top=grid.getBoundingClientRect().top+window.scrollY-140;if(window.scrollY>top)window.scrollTo({top:top,behavior:"smooth"})}
+  }
+  indexEl.addEventListener("click",function(e){var b=e.target.closest("button");if(b)setCat(b.getAttribute("data-cat"),true)});
+  more.addEventListener("click",function(){
+    var from=shown;shown=Math.min(shown+BATCH,list.length);addCards(from,shown);
+    var left=list.length-shown;more.parentNode.style.display=left>0?"flex":"none";
+    more.textContent="Show "+Math.min(BATCH,left)+" more designs";
+    count.textContent=(shown<list.length?"Showing "+shown+" of "+list.length:list.length+" designs");
+  });
+  grid.addEventListener("click",function(e){
+    var b=e.target.closest(".card");if(!b)return;
+    var items=list.map(function(it){var l=catName[it.c];return{src:it.f,alt:l+", design "+it.n,cap:l}});
+    lbOpen(items,parseInt(b.getAttribute("data-k"),10),b);
+  });
+  var rt,lastCols=0;
+  window.addEventListener("resize",function(){
+    clearTimeout(rt);rt=setTimeout(function(){if(colCount()!==cols.length)render()},150);
+  });
+
+  buildIndex();setCat("all",false);
+
+  /* ---------- nav ---------- */
+  var links=document.getElementById("links"),menu=document.getElementById("menu");
+  menu.addEventListener("click",function(){var o=links.classList.toggle("open");menu.setAttribute("aria-expanded",o?"true":"false")});
+  links.addEventListener("click",function(e){if(e.target.tagName==="A"){links.classList.remove("open");menu.setAttribute("aria-expanded","false")}});
+  document.getElementById("yr").textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
